@@ -23,7 +23,11 @@ export class LogIn{
             "p_clave_c": this.#credentials.password
         }).toString();
     };
-
+    async EmergencyLogOut(){
+        await fetch(URLs.Siiau_home, {headers: Headers})
+        await fetch(URLs.Siiau_encabezado, {headers: Headers});
+        await fetch(URLs.Siiau_inico, {headers: Headers});
+    }
     async #login_step_one(){
         const request = await fetch(URLs.Siiau_first_login, {
             method: "POST",
@@ -33,15 +37,18 @@ export class LogIn{
 
         const response_text = await request.text();
         const $ = load(response_text);
-
+        
         const $fInicio = $("form[name='fInicio']");
         const $fInicio_action = $fInicio.attr("action");
+        console.log($fInicio_action);
 
-        if($fInicio_action !== URLs.Siiau_first_login_action)
+        if($fInicio_action !== URLs.Siiau_first_login_action){
+            await this.EmergencyLogOut();
             throw {
-                message: "No se pudo iniciar sesion, posibles causa:\n\t1. Se tiene una sesión en SIIAU abierta.",
+                message: "No se pudo iniciar sesion, posibles causa:\n\t1. Se tiene una sesión en SIIAU abierta.\nIntente de nuevo",
                 type: "OPENED"
             };
+        }
         return;
     }
     async #RetifyLogIn(){

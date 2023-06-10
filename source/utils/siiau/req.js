@@ -7,7 +7,9 @@ export const URLs = {
     Siiau_endSession: "http://siiauescolar.siiau.udg.mx/wus/gupprincipal.salir",
     Siiau_encabezado: "http://siiauescolar.siiau.udg.mx/wus/gupprincipal.encabezado",
     Siiau_inico: "http://siiauescolar.siiau.udg.mx/wus/gupprincipal.forma_inicio",
-    Siiau_shedule: "http://siiauescolar.siiau.udg.mx/wal/sgpregi.horario?pidmp=$1&majrp=$2"
+    Siiau_shedule: "http://siiauescolar.siiau.udg.mx/wal/sgpregi.horario?pidmp=$1&majrp=$2",
+    Siiau_shedule_by_date: "http://siiauescolar.siiau.udg.mx/wal/sfpcoal.horario",
+    Siiau_home: "https://siiauescolar.siiau.udg.mx/wus/gupprincipal.inicio"
 }
 
 export const Headers = {
