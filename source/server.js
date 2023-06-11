@@ -18,6 +18,7 @@ export class Server{
         this.app.use(cors("http://127.0.0.1"))
     }
     router(){
+        this.app.get("/", (req, res) => res.json({message: "Server is alive"}));
         this.app.use("/api", ApiRouter);
     }
     listen(){
