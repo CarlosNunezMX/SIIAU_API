@@ -48,6 +48,7 @@ ApiRouter.get("/student", async (req, res) => {
         return res.json(student.Data);
     }
     catch(err){
+        console.log(err);
         if(err.endSession){
             await student.Close();
         }
