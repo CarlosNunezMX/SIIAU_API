@@ -72,10 +72,10 @@ export class Shedule extends LogIn {
                         lastCourse = courseName;
                         shedule = {}
                         shedule["Materia"] = courseName
-                        shedule["NRC"] = $(childs.get(0)).text()
+                        shedule["NRC"] = Number($(childs.get(0)).text())
                         shedule["Clave"] = $(childs.get(1)).text()
                         shedule["Seccion"] = $(childs.get(3)).text()
-                        shedule["Creditos"] = $(childs.get(4)).text()
+                        shedule["Creditos"] = Number($(childs.get(4)).text())
                         shedule["Profesor"] = $(childs.get(14)).text()
                         shedule["Inicio"] = $(childs.get(15)).text()
                         shedule["Fin"] = $(childs.get(16)).text()

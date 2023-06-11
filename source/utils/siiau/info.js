@@ -44,7 +44,7 @@ export class StudentInfo extends LogIn{
             const $ = load(response_text);
             const $table = $("table>tbody").first().find("td");
             
-            this.Data.Codigo = $($table[0]).text();
+            this.Data.Codigo = Number($($table[0]).text());
             this.Data.Nombre = $($table[1]).text()
             this.Data.Situacion = $($table[2]).text()
             this.Data.Nivel = $($table[3]).text();

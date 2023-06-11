@@ -1,6 +1,12 @@
 # Verify (Verificación)
 Este endpoint se caracteriza por hacer un incio de sesión en SIIAU y regresar si este fue exitoso, es recomendable usarlo en su formulario de login.
 
+## Endpoint
++ **Autenticación:** Requerida
+``` 
+/api/verify
+```
+
 ## Que retorna?
 + ok: `boolean`
 
