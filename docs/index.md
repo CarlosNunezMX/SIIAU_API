@@ -20,6 +20,8 @@ Ahora un indice para el uso del API
 * [Horario(Shedule)](api/shedule.md) `/api/shedule`
 * [Verify(Verificación)](api/verify.md) `/api/verify`
 * [Notes(Boleta)](api/notes.md) `/api/notes`
+* [Info(Info. del estudiante)](api/Info.md) `/api/info`
+
 ## Autenticación
 Para cada petición se requeriran dos cabezeras:
 ```
@@ -36,3 +38,5 @@ En caso de que no incluya las cabezeras se le regresara el error `401`, junto co
 ```
 **Nota:** Para evitar problemas con las sesiones estas son abiertas en el momento que se abre una petición y son cerradas en el momento en el que se termina de procesar esta petición. Si en algún caso la peticion llega a crashear se utiliza la función `utils.Login.EmergencyLogout()`.
 
+## Errores http
+Vease en: [Errores](api/Errores.md)
