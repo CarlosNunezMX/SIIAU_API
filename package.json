@@ -1,6 +1,9 @@
 {
-  "name": "SIIAU_INFO_SCRAPPER",
+  "name": "siiau",
   "version": "1.0.0",
+  "engines": {
+    "node": ">=20.2.0"
+  },
   "description": "",
   "type": "module",
   "main": "index.js",
