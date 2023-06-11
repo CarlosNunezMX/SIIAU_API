@@ -1,4 +1,4 @@
 import {Server} from "./server.js";
-const App = new Server(3000);
+const App = new Server();
 
 App.listen();
