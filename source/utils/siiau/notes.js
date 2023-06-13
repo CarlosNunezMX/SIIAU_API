@@ -47,7 +47,8 @@ export class Notes extends LogIn{
                 Calificacion.NRC = Number($($childs[0]).text());
                 Calificacion.Clave = $($childs[1]).text();
                 Calificacion.Materia = $($childs[2]).text();
-                Calificacion.Ordinario = $($childs[3]).text().trim();
+                Calificacion.Ordinario = $($childs[3]).text().trim().split("-")[0].trim();
+                Calificacion.Ordinario = isNaN(Number(Calificacion.Ordinario)) ? Calificacion.Ordinario : Number(Calificacion.Ordinario)
                 Calificacion.Kardex = $($childs[4]).text() === "SI"
                 Calificacion.Extraordinario = $($childs[5]).text().trim() !== "-"
                 this.Boleta.push(Calificacion);

@@ -5,7 +5,7 @@ Este endpoint se caracteriza por obtener el horario de el estudiante, y los cicl
 + **Autenticación:** Requerida
 + **Query:** Course
 ``` 
-/api/shedule?course=
+/api/schedule?course=
 ```
 
 ## Query
@@ -14,7 +14,7 @@ Para este endpoint existe un opción para hacer un query, que es la propiedad `c
 
 ## Que retorna?
 +  courses: [Course](#course)
-+  shedule: [Shedule](#shedule)
++  schedule: [Schedule](#schedule)
 
 
 ## Declaración de las interfaces
@@ -35,9 +35,9 @@ interface Course{
 ```
 
 
-### Shedule
+### Schedule
 ```typescript
-interface Shedule{
+interface Schedule{
     Materia: string,
     NRC: number,
     Clave: string,

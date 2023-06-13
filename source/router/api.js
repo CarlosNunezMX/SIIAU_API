@@ -2,7 +2,7 @@ import { Router } from "express";
 import { LogIn } from "../utils/siiau/login.js";
 import { Notes } from "../utils/siiau/notes.js";
 import { StudentInfo } from "../utils/siiau/info.js";
-import { Shedule } from "../utils/siiau/shedule.js";
+import { Schedule } from "../utils/siiau/shedule.js";
 
 function getHeaders(req, res, next){
     const user = req.headers["x-auth-user"];
@@ -72,14 +72,14 @@ ApiRouter.get("/notes", async (req, res) => {
     }
 })
 
-ApiRouter.get("/shedule",async (req, res) => {
+ApiRouter.get("/schedule",async (req, res) => {
     const {course} = req.query;
-    const shedule = new Shedule(req.credentials, course);
+    const shedule = new Schedule(req.credentials, course);
     try{
         await shedule.Execute()
         return res.json({
             courses: shedule.Courses,
-            shedule: shedule.Shedule
+            schedule: shedule.Schedule
         });
     }
     catch(err){
