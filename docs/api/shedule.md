@@ -14,7 +14,7 @@ Para este endpoint existe un opción para hacer un query, que es la propiedad `c
 
 ## Que retorna?
 +  courses: [Course](#course)
-+  schedule: [Schedule](#schedule)
++  schedule: [Schedule[6]](#schedule)
 
 
 ## Declaración de las interfaces
@@ -26,18 +26,17 @@ interface Course{
     key: string,
     value: string
 }
-
-/**
-    @typedef {Object} Course
-    @property {string} key
-    @property {string} value
-**/
 ```
 
 
 ### Schedule
 ```typescript
 interface Schedule{
+    Day: string,
+    Classess: Schedule_Data[]
+}
+
+interface Schedule_Data{
     Materia: string,
     NRC: number,
     Clave: string,
@@ -51,29 +50,11 @@ interface Schedule{
 
 interface Horario{
         Dia: string,
-        Horario: string,
+        Horario: {
+            start: string,
+            end: string
+        },
         Edificio: string,
         Aula: string
 }
-
-/**
- * @typedef {Object} Horario
- * @property {string} Dia - El día de la semana del horario.
- * @property {string} Horario - El horario de la materia.
- * @property {string} Edificio - El edificio donde se imparte la materia.
- * @property {string} Aula - El aula donde se imparte la materia.
- */
-
-/**
- * @typedef {Object} Schedule
- * @property {string} Materia - El nombre de la materia.
- * @property {number} NRC - El número de registro de curso.
- * @property {string} Clave - La clave de la materia.
- * @property {string} Seccion - La sección de la materia.
- * @property {number} Creditos - El número de créditos de la materia.
- * @property {string} Profesor - El nombre del profesor de la materia.
- * @property {string} Inicio - La hora de inicio de la materia.
- * @property {string} Fin - La hora de fin de la materia.
- * @property {Horario[]} Horario - Los horarios de la materia.
- */
 ´´´

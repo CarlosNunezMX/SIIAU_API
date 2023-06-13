@@ -25,20 +25,15 @@ interface Student{
     Admision: string,
     UltimoCiclo: string,
     Sede: string,
-    Certificacion: string
+    Certificacion: string,
+    DatosAdmision: {
+            Ciclo: string,
+            Procedencia: string,
+            PromedioEscuela: number,
+            PromedioExamen: number,
+            PuntajeAdmision: number,
+            TipoAdmision: string,
+            AportacionVoluntaria: number
+        }
 }
-
-/**
- * @typedef {Object} Student
- * @property {string} Carrera - La carrera del estudiante.
- * @property {number} Codigo - El código del estudiante.
- * @property {string} Situacion - La situación académica del estudiante.
- * @property {string} Nombre - El nombre del estudiante.
- * @property {string} Centro - El centro al que pertenece el estudiante.
- * @property {string} Nivel - El nivel académico del estudiante.
- * @property {string} Admision - La fecha de admisión del estudiante.
- * @property {string} UltimoCiclo - El último ciclo académico en el que el estudiante estuvo inscrito.
- * @property {string} Sede - La sede o campus del estudiante.
- * @property {string} Certificacion - La certificación del estudiante.
- */
 ```
