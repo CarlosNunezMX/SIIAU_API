@@ -1,6 +1,7 @@
 # RE: TakeDown
 
-\t**25 de Agosto de 2023, Tlaquepaque, Jalisco.**
+**25 de Agosto de 2023, Tlaquepaque, Jalisco.**
+
 **A quien corresponda.**
 
 Por el presente escrito, agradezco su aviso con respecto a mi proyecto de *Web Scrapping* del sistem SIIAU de la 
@@ -13,4 +14,5 @@ de manera satisfactoria, se le agradecería, que nos lo indique por escrito al c
 no era infringir ninguna normativa ni causar algún problema.
 
 Gracias por su compresión y espero poder resolver este asunto de la manera mas amigable.
+
 Atentamente: Carlos Núñez.
